@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+
+{% block body %}
+{% comment %} {% for post in postbyfilter %} {% endcomment %}
+<div class="container my-3">
+<div class="blog-post">
+ {% for post in postbyfilter %}
+ <!-- {{post.content}}       -->
+  <h2 class="blog-post-title">{{post.title}}</h2>
+        <p class="blog-post-meta">{{post.timeStamp}} by <a href="#">{{post.author}}</a></p>
+
+      
+        
+        {{post.content|safe}}
+        <!-- safe likhne se richtext editor me jysa  hain wase dikhaie deta  hain  -->
+       
+      </div>
+      </div>
+     
+      {% endfor %}
+      <h1>hello world  my name is raju kumar </h1>
+ {% endblock %}
