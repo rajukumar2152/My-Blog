@@ -134,7 +134,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")  #iss se ststic file add ho jayega 
 ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'newstatic')
+# STATIC_ROOT = os.path.join(BASE_DIR , 'staicfiles')
+# # STATIC_ROOT = os.path.join(BASE_DIR, 'newstatic')
 # STAIC_ROOT=os.path.join(BASE_DIR , "static")
 MESSAGE_TAGS = {
     messages.ERROR:'danger'  #yaha tag ko change kiya haun message.danger already sucess 

@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 
+from django.conf import settings      # static ke liye likha hain 
+from django.conf.urls.static import static
+
 admin.site.site_header="iCoder Admin"
 admin.site.site_title="iCoder Admin Panel"    # yaha hum dmin panel ko change kar diya hain apne according
 admin.site.index_title="Welcome to iCoder Admin Panel"
@@ -25,4 +28,4 @@ urlpatterns = [
     path('', include('home.urls')),
     path('blog/', include('blog.urls')),
     path('newsapp/', include('newsapp.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
