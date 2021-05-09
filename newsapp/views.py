@@ -1,6 +1,6 @@
 # importing api
 from django.shortcuts import render
-from newsapi import NewsApiClient
+# from newsapi import NewsApiClient
 
 # Create your views here.
 def index(request):
