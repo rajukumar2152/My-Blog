@@ -13,9 +13,11 @@
 
 
 from django.contrib import admin
-from blog.models import Post, BlogComment
+from blog.models import Post, BlogComment, Category
 
 admin.site.register((BlogComment))
+admin.site.register((Category))
+# admin.site.register((Post))
 @admin.register(Post)
 
 

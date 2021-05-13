@@ -1,26 +1,26 @@
 {% extends 'blog/base.html' %}
 {% block title %} BLOG HOME PAGE {% endblock title %}
 <!--  <div class="chd">  -->
-{% block dropdown %}
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      {% for c in cats %}
-      <a class="dropdown-item" href="/blog/category/{{c.pk}}">{{c.title}}</a>
-      {% endfor %}
-      
-  </li>
-  <!-- blog/category/1/ -->
-
-{% endblock %}
+  {% block dropdown %}
+  <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {% for c in cats %}
+        <a class="dropdown-item" href="/blog/category/{{c.pk}}">{{c.title}}</a>
+        {% endfor %}
+        
+    </li>
+  
+  
+  {% endblock %}
 {% block body %}
 
 <!-- <div class="chd"> -->
 <div class="container my-3">
     <h2>Coding article by Raju kumar </h2>
-    {% for post in allPosts %}
+    {% for post in sort %}
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary">{{post.author}}</strong>
@@ -35,11 +35,11 @@
 
         </div>
 
-        <div class="col-auto d-none d-lg-block my-3">
+        <div class="col-auto d-none d-lg-block my-4 ">
             <!-- <svg class="bd-placeholder-img" width="200" height="250"
                 xmlns="http://www.pptback.com/uploads/beautiful-sunset-backgrounds-powerpoint.jpg"
                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"> -->
-                <img src="https://raw.githubusercontent.com/rajukumar2152/Photos/master/Imge%20on%20mysite.png" class="bd-placeholder-img" width="200" height="166" aria-label="Placeholder: Thumbnail">
+                <img src="https://raw.githubusercontent.com/rajukumar2152/Photos/master/Imge%20on%20mysite.png" class="bd-placeholder-img" width="200" height="165" aria-label="Placeholder: Thumbnail">
                 <title>Placeholder</title>
                 
             <!-- </svg> -->

@@ -1,5 +1,18 @@
 {% extends 'blog/base.html' %}
+{% block dropdown %}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      {% for c in cats %}
+      <a class="dropdown-item" href="/blog/category/{{c.pk}}">{{c.title}}</a>
+      {% endfor %}
+      
+  </li>
+  <!-- blog/category/1/ -->
 
+{% endblock %}
 
 {% block body %}
 {% comment %} {% for post in postbyfilter %} {% endcomment %}
@@ -19,5 +32,6 @@
       </div>
      
       {% endfor %}
-      <h1>hello world  my name is raju kumar </h1>
+          
+      <h1>hello world  my name is raju kumar from chd </h1>
  {% endblock %}

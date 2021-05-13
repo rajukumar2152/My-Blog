@@ -4,6 +4,16 @@ from django.utils.timezone import now
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
+
+class Category(models.Model):
+    # sno= models.AutoField(primary_key=True)
+    title = models.CharField(max_length=100 )
+    # description = models.TextField()
+
+    def __str__(self):
+        return self.title
+    objects = models.Manager() 
+
 class Post(models.Model):
     sno= models.AutoField(primary_key=True)
     title= models.CharField(max_length=130,default="")
@@ -12,6 +22,7 @@ class Post(models.Model):
     author= models.CharField(max_length=100, default="")
     slug=models.CharField(max_length=130)
     timeStamp=models.DateTimeField(blank=True)
+    cat=models.ForeignKey(Category, on_delete=models.CASCADE ,null=True) # yaha catogry uper wale se ayega 
    
   
 
